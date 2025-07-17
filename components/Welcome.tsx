@@ -11,7 +11,7 @@ const FeatureCard: React.FC<{ icon: string; title: string; description: string }
 const Welcome: React.FC = () => {
     return (
         <div className="text-center py-8 px-4">
-            <h2 className="text-2xl font-bold text-slate-200 mb-4">Selamat Datang di Threads Content Generator</h2>
+            <h2 className="text-2xl font-bold text-slate-200 mb-4">Selamat Datang di Threadsmate</h2>
             <p className="text-slate-400 mb-8 max-w-2xl mx-auto">Mulai buat konten viral Anda hanya dalam tiga langkah mudah. Isi formulir di atas dan biarkan keajaiban terjadi!</p>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <FeatureCard 

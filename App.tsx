@@ -49,7 +49,7 @@ function App() {
         <div className="text-center my-8">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 flex items-center justify-center gap-3">
               <SparklesIcon className="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" />
-              Threads Content Generator
+              Threadsmate
             </h1>
             <p className="mt-3 max-w-2xl mx-auto text-lg text-slate-400">
               Ubah idemu menjadi rangkaian thread yang viral. Cukup masukkan ide, pilih gaya, dan biarkan AI meracik kata-katanya.
