@@ -1,0 +1,6 @@
+{
+  "name": "Threads Script Generator",
+  "description": "An AI-powered application to generate content scripts for Threads based on user-provided ideas, tone of voice, and desired length.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
