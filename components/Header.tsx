@@ -8,7 +8,7 @@ const Header: React.FC<{ onSettingsClick: () => void }> = ({ onSettingsClick }) 
     <header className="py-4 px-4 sm:px-6 lg:px-8 z-30 sticky top-0 bg-slate-900/70 backdrop-blur-sm border-b border-slate-800">
       <div className="max-w-4xl mx-auto flex justify-between items-center">
         {/* Left side */}
-        <h1 className="text-xl sm:text-2xl font-bold text-slate-100 tracking-wide">
+        <h1 className="text-xl sm:text-2xl font-bold text-yellow-400 tracking-wide">
           Pasanaktidur
         </h1>
 
