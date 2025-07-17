@@ -3,22 +3,16 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { type GenerationParams, type Thread } from '../types';
 
 const getAiClient = (): GoogleGenAI => {
-    // Fungsi ini berjalan di browser, jadi memiliki akses ke localStorage.
+    // Fungsi ini berjalan di browser dan mendapatkan kunci API dari localStorage,
+    // yang diatur oleh pengguna melalui modal pengaturan.
     const userApiKey = typeof window !== 'undefined' ? localStorage.getItem('user_api_key') : null;
 
     if (userApiKey && userApiKey.trim() !== '') {
         return new GoogleGenAI({ apiKey: userApiKey });
     }
-
-    // Ini adalah variabel waktu build. Akan diganti dengan nilainya selama build.
-    // Jika tidak diatur, nilainya akan undefined.
-    const envApiKey = process.env.API_KEY;
-
-    if (envApiKey) {
-        return new GoogleGenAI({ apiKey: envApiKey });
-    }
     
-    // Jika sampai di sini, tidak ada kunci yang tersedia.
+    // Jika tidak ada kunci yang tersedia di localStorage, lempar error.
+    // UI di App.tsx akan menangkap ini dan menampilkan pesan yang sesuai kepada pengguna.
     throw new Error("Kunci API tidak ditemukan.");
 };
 
