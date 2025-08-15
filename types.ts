@@ -6,6 +6,11 @@ export enum ToneStyle {
   PROVOKATIF = 'Provokatif',
 }
 
+export enum Language {
+  INDONESIA = 'Indonesia',
+  ENGLISH = 'English',
+}
+
 export enum HookType {
   PROBLEM_CALL_OUT = 'Problem Call Out',
   TARGET_CALL_OUT = 'Target Call Out',
@@ -26,6 +31,7 @@ export interface GenerationParams {
   hook: HookType;
   targetAudience: string;
   callToAction: string;
+  language: Language;
 }
 
 export interface Thread {

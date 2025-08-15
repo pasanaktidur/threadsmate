@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
 import GeneratedScript from './components/GeneratedScript';
-import { type GenerationParams, type Thread } from './types';
+import { type GenerationParams, type Thread, Language } from './types';
 import Welcome from './components/Welcome';
 import SettingsModal from './components/SettingsModal';
 import SparklesIcon from './components/icons/SparklesIcon';
@@ -13,12 +13,14 @@ function App() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [generatedThreads, setGeneratedThreads] = useState<Thread[] | null>(null);
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>(Language.INDONESIA);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const handleGenerateScript = useCallback(async (params: GenerationParams) => {
     setIsLoading(true);
     setError(null);
     setGeneratedThreads(null);
+    setSelectedLanguage(params.language);
 
     try {
       // API Key sekarang ditangani secara otomatis oleh service melalui environment variables.
@@ -66,8 +68,8 @@ function App() {
           )}
           
           <div className="mt-8 w-full">
-             { !isLoading && !generatedThreads && <Welcome /> }
-             <GeneratedScript threads={generatedThreads} isLoading={isLoading} />
+             { !isLoading && !generatedThreads && <Welcome language={selectedLanguage} /> }
+             <GeneratedScript threads={generatedThreads} isLoading={isLoading} language={selectedLanguage} />
           </div>
 
         </div>

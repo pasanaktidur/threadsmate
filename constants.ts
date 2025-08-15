@@ -1,4 +1,4 @@
-import { ToneStyle, HookType } from './types';
+import { ToneStyle, HookType, Language } from './types';
 
 export const TONE_STYLES: ToneStyle[] = [
   ToneStyle.INFORMATIF,
@@ -19,4 +19,9 @@ export const HOOK_TYPES: HookType[] = [
   HookType.PATTERN_INTERRUPT,
   HookType.WARNING_CAUTION,
   HookType.NEGATIVITY_BIAS,
+];
+
+export const LANGUAGES: Language[] = [
+  Language.INDONESIA,
+  Language.ENGLISH,
 ];
