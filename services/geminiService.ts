@@ -114,7 +114,6 @@ const generatePrompt = (params: GenerationParams): string => {
     ]
     \`\`\`
   `;
-}
 };
 
 const responseSchema = {
